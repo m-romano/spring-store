@@ -1,4 +1,18 @@
 services:
+  spring-store-docker:
+    build: .
+    environment:
+      - 'SPRING_APPLICATION_NAME=springstore'
+      - 'SPRING_DATASOURCE_URL=jdbc:postgresql://localhost/webstore'
+      - 'SPRING_DATASOURCE_USERNAME=springuser'
+      - 'SPRING_DATASOURCE_PASSWORD=boot'
+      - 'SPRING_DATASOURCE_TOMCAT_MAX-WAIT=10000'
+      - 'SPRING_DATASOURCE_TOMCAT_MAX-ACTIVE=50'
+      - 'SPRING_DATASOURCE_TOMCAT_TEST-ON-BORROW=true'
+      - 'SPRING_LIQUIBASE_CHANGE-LOG=classpath:db/changelog/db.changelog-master.xml'
+    ports:
+      - '8080:8080'
+
   postgres:
     image: 'postgres:latest'
     environment:
