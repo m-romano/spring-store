@@ -1,0 +1,40 @@
+2024-06-04T01:21:25.172+0200 INFO Starting SpringstoreApplication using Java 22 with PID 20786 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T01:21:25.176+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T01:21:25.177+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T01:22:58.623+0200 INFO Starting SpringstoreApplication using Java 22 with PID 21467 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T01:22:58.627+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T01:22:58.628+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T01:24:14.665+0200 INFO Starting SpringstoreApplication using Java 22 with PID 22108 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T01:24:14.669+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T01:24:14.669+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T01:25:52.862+0200 INFO Starting SpringstoreApplication using Java 22 with PID 22790 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T01:25:52.867+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T01:25:52.867+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T01:27:34.871+0200 INFO Starting SpringstoreApplication using Java 22 with PID 23382 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T01:27:34.876+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T01:27:34.877+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T02:35:26.608+0200 INFO Starting SpringstoreApplication using Java 22 with PID 31485 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T02:35:26.613+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T02:35:26.613+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T02:36:34.336+0200 INFO Starting SpringstoreApplication using Java 22 with PID 32317 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T02:36:34.341+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T02:36:34.342+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T02:44:14.941+0200 INFO Starting SpringstoreApplication using Java 22 with PID 33643 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T02:44:14.954+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T02:44:14.955+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T02:46:51.917+0200 INFO Starting SpringstoreApplication using Java 22 with PID 34887 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T02:46:51.921+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T02:46:51.922+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T02:46:58.766+0200 INFO Started SpringstoreApplication in 7.109 seconds (process running for 8.486)
+2024-06-04T03:10:34.657+0200 INFO Starting SpringstoreApplication using Java 22 with PID 36940 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T03:10:34.662+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T03:10:34.663+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T03:10:42.692+0200 INFO Started SpringstoreApplication in 8.38 seconds (process running for 9.812)
+2024-06-04T03:14:54.154+0200 INFO Starting SpringstoreApplication using Java 22 with PID 38009 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T03:14:54.159+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T03:14:54.160+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T03:15:00.820+0200 INFO Started SpringstoreApplication in 6.944 seconds (process running for 8.231)
+2024-06-04T03:15:18.604+0200 INFO Starting SpringstoreApplication using Java 22 with PID 38651 (/home/sky/Downloads/springstore/target/classes started by sky in /home/sky/Downloads/springstore)
+2024-06-04T03:15:18.609+0200 DEBUG Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-04T03:15:18.610+0200 INFO No active profile set, falling back to 1 default profile: "default"
+2024-06-04T03:15:24.478+0200 INFO Started SpringstoreApplication in 6.143 seconds (process running for 7.455)

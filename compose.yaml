@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=webstore'
+      - 'POSTGRES_PASSWORD=boot'
+      - 'POSTGRES_USER=springuser'
+    ports:
+      - '5432'
