@@ -31,14 +31,6 @@ then run the project through the IDE or run
 $ ./mvnw spring-boot:run
 ```
 
-### Docker
-Build and run the app with Compose.
-
-Compose pulls a Postgres image, builds an image for the code, and starts the defined service.
-```bash
-$ docker compose up
-```
-
 You will get a bunch of debug logs, but you should get an output like this in the terminal window
 ```bash
   .   ____          _            __ _ _
@@ -68,6 +60,22 @@ You will get a bunch of debug logs, but you should get an output like this in th
 
 Omitted outputs...
 ```
+
+### Docker
+Build and run the app with Compose.
+
+First, you need to build the .jar of the app
+```bash
+$ ./mvnw clean install
+```
+
+Compose pulls a Postgres image and a liquibase image and starts the defined service.
+
+Then, run
+```bash
+$ docker compose up
+```
+
 
 ## Contributing
 
