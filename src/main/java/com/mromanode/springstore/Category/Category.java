@@ -25,14 +25,11 @@ public class Category {
 
     private String description;
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "category")
     private Set<SubCategory> subCategories;
 
-    @ManyToMany
-    @JoinTable(
-            name = "category_products",
-            joinColumns = @JoinColumn(name = "category_id"),
-            inverseJoinColumns = @JoinColumn(name = "product_id")
-    )
+    @ManyToMany(mappedBy = "categories")
     private Set<Product> products;
+
+
 }

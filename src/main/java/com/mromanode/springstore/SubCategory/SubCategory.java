@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 import java.util.Set;
 import java.util.UUID;
 
@@ -29,7 +30,8 @@ public class SubCategory {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-    @ManyToMany(mappedBy = "subCategories")
+    @ManyToMany(mappedBy = "subcategories")
     private Set<Product> products;
+
 
 }

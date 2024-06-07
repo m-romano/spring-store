@@ -47,14 +47,17 @@ public class Product {
 
     @ManyToMany
     @JoinTable(
-            name = "product_subcategories",
+            name = "products_categories",
             joinColumns = @JoinColumn(name = "product_id"),
-            inverseJoinColumns = @JoinColumn(name = "subcategory_id")
-    )
-    private Set<SubCategory> subCategories;
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
+    Set<Category> categories;
 
-    @ManyToMany(mappedBy = "products")
-    private Set<Category> categories;
+    @ManyToMany
+    @JoinTable(
+            name = "products_subcategories",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "subcategory_id"))
+    Set<SubCategory> subcategories;
 
 }
 
