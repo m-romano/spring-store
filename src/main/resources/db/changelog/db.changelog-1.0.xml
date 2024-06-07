@@ -74,6 +74,12 @@
                 <constraints nullable="false"/>
             </column>
             <column name="description" type="varchar(255)"/>
+            <column name="subcategory_id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="products_id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
 
@@ -86,56 +92,53 @@
                 <constraints nullable="false"/>
             </column>
             <column name="description" type="varchar(255)"/>
+            <column name="category_id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="subcategories" baseColumnNames="category_id" constraintName="fk_subcategories_categories_id"
+                                 referencedTableName="categories"
+                                 referencedColumnNames="id"/>
+
+    </changeSet>
+
+    <changeSet id="5" author="mromanode">
+        <createTable tableName="products_categories">
+            <column name="product_id" type="UUID">
+                <constraints nullable="false"/>
+            </column>
             <column name="category_id" type="UUID">
                 <constraints nullable="false"/>
             </column>
         </createTable>
-        <addForeignKeyConstraint baseTableName="subcategories"
-                                 baseColumnNames="category_id"
-                                 constraintName="fk_subcategory_category"
-                                 referencedTableName="categories"
-                                 referencedColumnNames="id"/>
-    </changeSet>
-
-    <changeSet id="5" author="mromanode">
-        <createTable tableName="product_subcategories">
-            <column name="product_id" type="UUID">
-                <constraints nullable="false"/>
-            </column>
-            <column name="subcategory_id" type="UUID">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-        <addForeignKeyConstraint baseTableName="product_subcategories"
-                                 baseColumnNames="product_id"
-                                 constraintName="fk_product_subcategory_product"
+        <addForeignKeyConstraint baseTableName="products_categories" baseColumnNames="product_id"
+                                 constraintName="fk_products_categories_product_id"
                                  referencedTableName="products"
                                  referencedColumnNames="id"/>
-        <addForeignKeyConstraint baseTableName="product_subcategories"
-                                 baseColumnNames="subcategory_id"
-                                 constraintName="fk_product_subcategory_subcategory"
-                                 referencedTableName="subcategories"
+        <addForeignKeyConstraint baseTableName="products_categories" baseColumnNames="category_id"
+                                 constraintName="fk_products_categories_category_id"
+                                 referencedTableName="categories"
                                  referencedColumnNames="id"/>
     </changeSet>
 
     <changeSet id="6" author="mromanode">
-        <createTable tableName="category_products">
-            <column name="category_id" type="UUID">
-                <constraints nullable="false"/>
-            </column>
+        <createTable tableName="products_subcategories">
             <column name="product_id" type="UUID">
                 <constraints nullable="false"/>
             </column>
+            <column name="subcategory_id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
-        <addForeignKeyConstraint baseTableName="category_products"
-                                 baseColumnNames="category_id"
-                                 constraintName="fk_category_product_category"
-                                 referencedTableName="categories"
-                                 referencedColumnNames="id"/>
-        <addForeignKeyConstraint baseTableName="category_products"
+        <addForeignKeyConstraint baseTableName="products_subcategories"
                                  baseColumnNames="product_id"
-                                 constraintName="fk_category_product_product"
+                                 constraintName="fk_products_subcategories_product_id"
                                  referencedTableName="products"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="products_subcategories"
+                                 baseColumnNames="subcategory_id"
+                                 constraintName="fk_products_subcategories_subcategory_id"
+                                 referencedTableName="subcategories"
                                  referencedColumnNames="id"/>
     </changeSet>
 
