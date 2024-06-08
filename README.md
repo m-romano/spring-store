@@ -17,7 +17,6 @@ $ git clone git@github.com:m-romano/spring-store.git
 [PostgreSQL](https://www.postgresql.org/download/)
 
 ### Installing
-
 Open your favorite IDE and open the terminal window.
 
 If the IDE do not download the dependencies automatically, run
@@ -62,18 +61,37 @@ Omitted outputs...
 ```
 
 ### Docker
-Build and run the app with Compose.
 
-First, you need to build the .jar of the app
+You can pull the latest docker image from docker hub
 ```bash
-$ ./mvnw clean install
+$ docker pull mromanode/springstore
 ```
 
-Compose pulls a Postgres image and a liquibase image and starts the defined service.
-
-Then, run
+Or build you own image from running
 ```bash
-$ docker compose up
+$ docker build --platform linux/amd64 -t springstore-docker .
+```
+
+change your platform respectively.
+
+Last, run 
+```bash
+docker run -p 8080:8080 -t springstore-docker
+```
+
+
+### Docker compose support (in development)
+Start your application by running docker compose command:
+
+```bash
+$ docker compose up -d
+```
+
+Your container list should show two containers running and their port mappings, as seen below:
+```bash
+$ docker image ls
+REPOSITORY           TAG       IMAGE ID       CREATED         SIZE
+springstore-docker   latest    4cf762a7b96d   4 minutes ago   124MB
 ```
 
 
