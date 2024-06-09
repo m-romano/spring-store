@@ -80,7 +80,7 @@ docker run -p 8080:8080 -t springstore-docker
 ```
 
 
-### Docker compose support (in development)
+### Docker compose support
 Start your application by running docker compose command:
 
 ```bash
