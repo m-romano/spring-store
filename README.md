@@ -90,8 +90,14 @@ $ docker compose up -d
 Your container list should show two containers running and their port mappings, as seen below:
 ```bash
 $ docker image ls
-REPOSITORY           TAG       IMAGE ID       CREATED         SIZE
-springstore-docker   latest    4cf762a7b96d   4 minutes ago   124MB
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+liquibase    latest    85f72acd9e6e   3 days ago    387MB
+postgres     latest    cff6b68a194a   4 weeks ago   432MB
+
+$ docker ps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS                      PORTS                                         NAMES
+1a8161e68897   liquibase:latest   "/liquibase/docker-e…"   About a minute ago   Exited (0) 59 seconds ago                                                 springstore-liquibase-1
+3cc7badc0603   postgres:latest    "docker-entrypoint.s…"   About a minute ago   Up About a minute           0.0.0.0:32768->5432/tcp, :::32768->5432/tcp   springstore-postgres-1
 ```
 
 
