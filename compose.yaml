@@ -1,27 +1,19 @@
 services:
   postgres:
-    image: 'postgres:latest'
+    image: 'postgres:16-alpine'
     environment:
       - 'POSTGRES_DB=webstore'
-      - 'POSTGRES_PASSWORD=boot'
-      - 'POSTGRES_USER=spring'
+      - 'POSTGRES_PASSWORD=deme'
+      - 'POSTGRES_USER=postgres'
     ports:
       - '5432'
-    networks:
-      - backend
 
   liquibase:
     image: 'liquibase:latest'
     environment:
       - 'changeLogFile=db/changelog/db.changelog-master.xml'
-      - 'url=jdbc:postgresql://localhost/webstore'
+      - 'url=jdbc:postgresql://postgres:5432/webstore'
       - 'username=springuser'
       - 'password=boot'
-    networks:
-      - backend
     depends_on:
       - postgres
-
-networks:
-  backend:
-    driver: bridge
