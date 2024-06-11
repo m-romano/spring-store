@@ -1,6 +1,6 @@
 # Spring Store
 
-A deployable e-commerce site for your business. **Still Work In Progress**
+A deployable e-commerce site for your business. **Under development**
 
 ## Getting Started
 
