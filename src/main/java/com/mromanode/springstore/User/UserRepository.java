@@ -9,11 +9,12 @@ import java.util.Set;
 import java.util.UUID;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
-    Set<User> getUserByFirstNameIgnoreCase(String firstName);
-    Set<User> getUserByLastNameIgnoreCase(String lastName);
-    Optional<User> getUserByEmailIgnoreCase(String email);
+    Optional<User> getUserById(UUID id);
+    Set<User> findUserByFirstNameIgnoreCase(String firstName);
+    Set<User> findUserByLastNameIgnoreCase(String lastName);
+    Optional<User> findUserByEmailIgnoreCase(String email);
 
     @Modifying
     @Query("update User u set u.firstName = ?1, u.lastName = ?2, u.email = ?3, u.role = ?4, u.salted = ?5 where u.id = ?6")
-    User updateUserById(String firstName, String lastName, String email, String role, String salted, UUID id);
+    void updateUserById(String firstName, String lastName, String email, String role, String salted, UUID id);
 }
