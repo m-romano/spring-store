@@ -39,7 +39,6 @@ public class UserController {
     }
 
     @GetMapping(value = "/firstname/{firstname}")
-    @ResponseStatus(HttpStatus.OK)
     public Set<User> getUserByFirstNameIgnoreCase(@PathVariable("firstname") String firstname) {
         logger.info("Invoked request: get user by first name: {}", firstname);
         logger.warn("Searching for users: by first name {}", firstname);
@@ -53,7 +52,6 @@ public class UserController {
     }
 
     @GetMapping(value = "/lastname/{lastname}")
-    @ResponseStatus(HttpStatus.OK)
     public Set<User> getUserByLastNameIgnoreCase(@PathVariable("lastname") String lastname) {
         logger.info("Invoked request: get user by last name: {}", lastname);
         logger.warn("Searching for users: by last name {}", lastname);
@@ -67,7 +65,6 @@ public class UserController {
     }
 
     @GetMapping(value = "/email/{email}")
-    @ResponseStatus(HttpStatus.OK)
     public Optional<User> getUserByEmailIgnoreCase(@PathVariable("email") String email) {
         logger.info("Invoked request: get user by email: {}", email);
         logger.warn("Searching for user: by email {}", email);
@@ -81,7 +78,6 @@ public class UserController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
     public User save(@RequestBody User user) {
         logger.info("Invoked request: save user {}", user);
         logger.warn("Saving user: {}", user);
@@ -89,15 +85,13 @@ public class UserController {
     }
 
     @PutMapping(value = "/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public void updateById(@PathVariable("id") UUID id, @RequestBody User user) {
-        logger.info("Invoked request: update user info: ID {}", id);
-        logger.warn("Updating user info: ID {}", id);
-        userService.updateById(id, user.getFirstName(), user.getLastName(), user.getEmail(), user.getRole(), user.getSalted());
+    public void updateUserById(@PathVariable("id") UUID id, @RequestBody User user) {
+        logger.info("Invoked request: update user info: by ID {}", id);
+        logger.warn("Updating user info: by ID {}", id);
+        userService.updateUserById(id, user.getFirstName(), user.getLastName(), user.getEmail(), user.getRole(), user.getSalted());
     }
 
     @DeleteMapping(value = "/{id}")
-    @ResponseStatus(HttpStatus.OK)
     public void delete(@PathVariable("id") UUID id) {
         logger.info("Invoked request: delete user: by ID {}", id);
         logger.warn("Deleting user: by ID {}", id);

@@ -63,11 +63,12 @@ public class UserService {
         return savedUser;
     }
 
-    public void updateById(UUID userId, String firstName, String lastName, String email, String role, String salted) {
-        logger.info("Invoked method: update user info: ID {}, firstName {}, lastName {}, email {}, role {}, salted {}", userId, firstName, lastName, email, role, salted);
-        logger.warn("Updating user info: ID {}", userId);
-        userRepository.updateById(firstName, lastName, email, role, salted, userId);
-        logger.info("Updated user info: ID {}", userId);
+    public User updateUserById(UUID id, String firstName, String lastName, String email, String role, String salted) {
+        logger.info("Invoked method: update user info: ID {}, firstName {}, lastName {}, email {}, role {}, salted {}", id, firstName, lastName, email, role, salted);
+        logger.warn("Updating user info: by ID {}", id);
+        User updatedUser = userRepository.updateUserById(firstName, lastName, email, role, salted, id);
+        logger.info("Updated user info: by ID {}", id);
+        return updatedUser;
     }
 
     public void delete(UUID id) {
