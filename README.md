@@ -101,15 +101,13 @@ CONTAINER ID   IMAGE              COMMAND                  CREATED              
 ```
 
 
-## Contributing
+## Contributing (Under Development)
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
 * **Marco Romano** - *Initial work* - [mromanode](https://github.com/mromanode)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
@@ -119,3 +117,19 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Hat tip to anyone whose code was used
 * Inspiration
+
+## TODO
+* Add entities implementation.
+* Fix docker overriding local postgresql connection.
+* Write mocking and unit tests
+* Security: Implement Spring Security for authentication and authorization.
+* Monitoring and Metrics: Monitoring tools for application health and performance.
+* API Documentation: Swagger for generating API documentation.
+* Caching: Integrate caching with Redis.
+* Validation: Hibernate validator for validating user input.
+* Message Queues: Asynchronous processing.
+* Testcontainers: Use docker within tests.
+* CI/CD: Continuous integration/deployment
+* Microservices: Set up a Eureka server
+* Documentation: Comprehensive documentation
+*Error tracking
