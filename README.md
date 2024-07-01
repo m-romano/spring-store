@@ -1,3 +1,4 @@
+# I am doing a big refactoring of the code base and adding new features. I will move the repository anytime soon.
 # Spring Store
 
 A deployable e-commerce site for your business. **Under development**
